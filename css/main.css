@@ -1,0 +1,235 @@
+body {
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    overflow: hidden;
+    cursor: default;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-image: url(../img/bodybackgroundblur.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100px;
+
+    background-color: rgba(255, 166, 0, 0.5);
+    border-bottom: 5px solid rgba(212, 138, 0, 0.5);
+}
+
+header h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: auto;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.score{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30pt;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.barrier{
+    position: absolute;
+
+    bottom: 0;
+    left: 500px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    width: 25px;
+    height: calc(100% - 105px);
+}
+
+.container {
+    position: absolute;
+
+    top: 105px;
+
+    width: 500px;
+    height: calc(100vh - 105px);
+
+    background-color: rgba(46, 46, 46, 0.2);
+    overflow: hidden;
+}
+
+.content{
+    position: absolute;
+    top: 105px;
+    right: 0;
+
+    width: calc(100% - 525px);
+    height: calc(100vh - 105px);
+}
+
+.content section{
+    position: relative;
+    left: 20%;
+    top: 10%;
+
+    width: calc(60% - 40px);
+    height: calc(80% - 40px);
+
+    border: 0.3vw solid orange;
+    border-radius: 25px;
+
+    padding: 20px;
+    overflow: auto;
+    overflow-wrap: break-word;
+
+    background-color: rgba(39, 39, 39, 0.5);
+    z-index: 0;
+
+    transition: 500ms;
+}
+
+.content section:hover{
+    border: 0.3vw solid rgb(255, 190, 71);
+}
+
+.content section button{
+    position: relative;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    white-space: nowrap;
+
+    color: rgba(255, 255, 255, 0.75);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
+    background-color: rgba(255, 166, 0, 0.5);
+    border: 0.3vw solid orange;
+    border-radius: 25px;
+
+    width: 50%;
+    height: 10%;
+
+    transition: 500ms;
+}
+
+.content section button:hover{
+    border: 0.3vw solid rgb(255, 190, 71);
+    color: rgba(255, 255, 255, 1);
+}
+
+.content section button:active{
+    transition: 250ms;
+    
+    background-color: rgba(255, 179, 37, 0.75);
+    border: 0.3vw solid rgb(255, 190, 71);
+    color: rgba(255, 255, 255, 1);
+}
+
+.exit{
+    z-index: 1;
+    display: none;
+
+    position: relative;
+    left: calc(20% + 20px);
+    top: calc(10% + 40px);
+
+    height: 25px;
+    width: 25px;
+}
+
+.receita{
+    font-size:xx-large;
+
+    top: calc(15% - 20px);
+    left: 25%;
+}
+
+.historia{
+    font-size:xx-large;
+
+    top: calc(35% - 20px);
+    left: 25%;
+}
+
+.curiosidades{
+    font-size:x-large;
+
+    top: calc(55% - 20px);
+    left: 25%;
+}
+
+.label{
+    display: block;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+
+    color: rgb(255, 187, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
+    animation: float 5s infinite;
+}
+
+.dino {
+    position: absolute;
+
+    border-radius: 10px;
+    bottom: 0;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+
+    background-image: url(../img/paodequeijo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    width: 30px;
+    height: 60px;
+    background-color: #c20000;
+}
+
+@keyframes float{
+    0%{
+        font-size: 24pt;
+    }
+
+    50%{
+        font-size: 26pt;
+    }
+
+    100%{
+        font-size: 24pt;
+    }
+}
